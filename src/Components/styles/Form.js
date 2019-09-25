@@ -82,7 +82,7 @@ const Form = styled(Forme)`
       height: auto;
       label {
         display: inherit;
-        width: 48%;
+        width: 100%;
         vertical-align: top;
         &[for="countryName"] {
           margin-left: 1.1em;

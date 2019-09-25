@@ -3,8 +3,7 @@ import { Formik, Field } from "formik";
 import Form from "./styles/Form";
 
 const initialValues = {
-  city: "",
-  country: ""
+  city: ""
 };
 
 const WeatherInput = props => (
@@ -16,9 +15,6 @@ const WeatherInput = props => (
           <label htmlFor="city">
             <Field name="city" placeholder="City" />
           </label>
-          <label htmlFor="country">
-            <Field name="country" placeholder="Country" />
-          </label>
         </div>
         <div>
           {props.country && props.city && (
@@ -29,6 +25,7 @@ const WeatherInput = props => (
           {props.temperature && <p>Temperature: {props.temperature}</p>}
           {props.main && <p>Main: {props.main}</p>}
           {props.description && <p>Conditions: {props.description}</p>}
+          {props.error && <p className="weather__error">{ props.error }</p> }
         </div>
         <button type="submit">Search</button>
       </fieldset>
